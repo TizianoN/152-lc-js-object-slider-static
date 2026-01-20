@@ -1,0 +1,104 @@
+/* CSS Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Utilities */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* # Carousel */
+
+#carousel {
+  height: 400px;
+  width: 900px;
+  margin: 30px auto;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+}
+
+.gallery {
+  height: 100%;
+}
+
+.gallery figure {
+  width: 100%;
+  height: 100%;
+  display: block;
+  position: relative;
+}
+
+.gallery img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.gallery figure {
+  display: none;
+}
+
+.gallery figure.active {
+  display: block;
+}
+
+.gallery figcaption {
+  position: absolute;
+  text-align: right;
+  bottom: 20px;
+  right: 20px;
+  left: 20px;
+  color: white;
+  text-shadow: 0 0 5px black;
+}
+
+.gallery figcaption h3 {
+  font-size: 1rem;
+}
+
+#thumbnails {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.thumb {
+  cursor: pointer;
+}
+
+.thumb.active {
+  border: 2px solid black;
+  padding: 3px;
+  border-radius: 14px;
+}
+
+.thumb img {
+  border-radius: 10px;
+  max-width: 100%;
+  height: 100px;
+  display: block;
+}
+
+#prev,
+#next,
+#invert-direction {
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  border: 3px solid currentColor;
+  border-radius: 50%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+}
