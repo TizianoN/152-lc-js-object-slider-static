@@ -52,9 +52,13 @@ let galleryHTML = "";
 let thumbnailsHTML = "";
 
 for (let i = 0; i < pics.length; i++) {
+  // * get pic data
   const { image, text, title } = pics[i];
+
+  // * calculate wheter is the node to shows - it has class "active"
   const activeClassName = i === currentActiveIndex ? "active" : "";
 
+  // * generate gallery html
   galleryHTML += `
     <figure class="${activeClassName}">
       <figcaption>
@@ -66,6 +70,7 @@ for (let i = 0; i < pics.length; i++) {
     </figure>
   `;
 
+  // * generate thumbnails html
   thumbnailsHTML += `
     <div class="thumb ${activeClassName}" data-carousel-index="${i}">
       <img alt="${title}" src="${image}" />
@@ -73,6 +78,7 @@ for (let i = 0; i < pics.length; i++) {
   `;
 }
 
+// * update DOM
 galleryContainer.innerHTML = galleryHTML;
 thumbnailsContainer.innerHTML = thumbnailsHTML;
 
